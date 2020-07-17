@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalsComponent } from './feature/animals/animals.component';
 import { AnimalDetailComponent } from './feature/animal-detail/animal-detail.component';
+import { DashboardComponent } from './feature/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalsComponent,
-    AnimalDetailComponent
+    AnimalDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

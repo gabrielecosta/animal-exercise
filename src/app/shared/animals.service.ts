@@ -14,4 +14,23 @@ export class AnimalsService {
     return of (ANIMALS);
   }
 
+  TOPANIMALS = ANIMALS;
+
+  getTopRated(numEle: number): Observable<Animal[]> {
+    return of (this.TOPANIMALS.sort(
+      function(a,b) {
+        return  b.votes - a.votes;
+      }
+    ).slice(0, numEle));
+  }
+
+  isAdopted(animal: Animal): string {
+    if (animal.adopted === true) {
+      status = 'Adopted';
+    } else {
+      status = 'NotAdopted';
+    }
+    return status;
+  }
+
 }
