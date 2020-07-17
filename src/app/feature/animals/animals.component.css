@@ -1,0 +1,9 @@
+.Adopted {
+    border: 1px solid red;
+    color: red;
+}
+
+.NotAdopted {
+    border: 1px solid green;
+    color: green;
+}
