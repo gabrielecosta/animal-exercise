@@ -1,9 +1,11 @@
+import { AnimalType } from './animal-type';
 import { Animal } from './animal';
 
 export const ANIMALS: Animal[] = [
     { 
         id: 1,
         name: "Rocky",
+        type: AnimalType.DOG,
         race: "Pastore tedesco",
         age: 2,
         votes: 150,
@@ -14,6 +16,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 2,
         name: "Carl",
+        type: AnimalType.DOG,
         race: "Labrador retriever",
         age: 4,
         votes: 90,
@@ -23,17 +26,19 @@ export const ANIMALS: Animal[] = [
     },
     {
         id: 3,
-        name: "Poopy",
-        race: "Maltese",
+        name: "Luna",
+        type: AnimalType.CAT,
+        race: "Persiano",
         age: 1,
         votes: 50,
         adopted: false,
         imagepath: 
-        "https://images.unsplash.com/photo-1446730853965-62433e868929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        'https://i.pinimg.com/236x/f0/73/7e/f0737ef44ce493308c643263bff528c3--cute-cats-adorable-animals.jpg'
     },
     {
         id: 4,
         name: "Jack",
+        type: AnimalType.DOG,
         race: "Jack russell terrier",
         age: 2,
         votes: 170,
@@ -44,6 +49,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 5,
         name: "Rocky",
+        type: AnimalType.DOG,
         race: "Siberian husky",
         age: 2,
         votes: 190,
@@ -54,6 +60,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 6,
         name: "Bob",
+        type: AnimalType.DOG,
         race: "Bouledogue francese",
         age: 6,
         votes: 65,
@@ -64,6 +71,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 7,
         name: "Susanne",
+        type: AnimalType.DOG,
         race: "Cocker spaniel inglese",
         age: 7,
         votes: 85,
@@ -74,6 +82,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 8,
         name: "Alex",
+        type: AnimalType.DOG,
         race: "Pinscher",
         age: 4,
         votes: 110,
@@ -84,6 +93,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 9,
         name: "Junior",
+        type: AnimalType.DOG,
         race: "American Pit Bull Terrier",
         age: 1,
         votes: 160,
@@ -94,6 +104,7 @@ export const ANIMALS: Animal[] = [
     {
         id: 10,
         name: "Georgie",
+        type: AnimalType.DOG,
         race: "Beagle",
         age: 3,
         votes: 105,
