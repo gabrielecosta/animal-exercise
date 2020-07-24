@@ -1,0 +1,15 @@
+<h2>Benvenuti nel nostro sito!</h2>
+<h5>Guarda gli animali più votati</h5>
+<div class="card"  style=" width: 18rem; display: inline-flex;" *ngFor="let animal of animals">
+    <img src="{{animal.imagepath}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{animal.name}}</h5>
+      <p class="card-text">
+          Razza: {{animal.race}},
+          Anni: {{animal.age}},
+          Voti: {{animal.votes}}
+      </p>
+      <p [ngClass]="isAdopted(animal)">{{isAdopted(animal)}}</p>
+      <button class="btn btn-primary">Guarda</button>
+    </div>
+</div>
