@@ -25,11 +25,7 @@ export class AnimalsComponent implements OnInit {
   }
 
   isAdopted(animal: Animal): string {
-    if (animal.adopted === true) {
-      status = 'Adopted';
-    } else {
-      status = 'NotAdopted';
-    }
-    return status;
+    return this.animalService.isAdopted(animal);
   }
+  
 }

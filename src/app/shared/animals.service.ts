@@ -14,14 +14,12 @@ export class AnimalsService {
     return of (ANIMALS);
   }
 
-  TOPANIMALS = ANIMALS;
+animals = ANIMALS;
 
   getTopRated(numEle: number): Observable<Animal[]> {
-    return of (this.TOPANIMALS.sort(
-      function(a,b) {
-        return  b.votes - a.votes;
-      }
-    ).slice(0, numEle));
+    return of( [ ...this.animals ]
+			.sort( ( a, b ) => b.votes - a.votes )
+			.slice( 0, numEle ) );
   }
 
   isAdopted(animal: Animal): string {
