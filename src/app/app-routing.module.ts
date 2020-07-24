@@ -1,3 +1,4 @@
+import { LoginComponent } from './feature/login/login.component';
 import { AnimalDetailComponent } from './feature/animal-detail/animal-detail.component';
 import { AnimalsComponent } from './feature/animals/animals.component';
 import { DashboardComponent } from './feature/dashboard/dashboard.component';
@@ -8,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'animali', component: AnimalsComponent},
+  { path: 'login', component: LoginComponent},
   { path: '**', component: DashboardComponent}
 ];
 

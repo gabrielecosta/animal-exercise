@@ -1,0 +1,10 @@
+<h1>Login</h1>
+<form>
+    <input [(ngModel)]="username" name="username" alt="username" type="text" placeholder="Username">
+    <input [(ngModel)]="password" name="password" alt="Password" type="password" placeholder="Password">
+    <div *ngIf="invalidLogin" id="error">
+        <span>Username or password are invalid!</span>
+    </div>
+    <button (click)="login()" id="btn-login">Login</button>
+    <button (click)="cancel()">Cancel</button>
+</form>

@@ -1,7 +1,17 @@
 <div class="d-flex">
   <div class="p-2" routerLink="/dashboard">Dashboard</div>
   <div class="p-2"> | </div>
-  <div class="p-2" routerLink="/animali">Animali</div>
-  <div class="p-2 ml-auto"><button>Login</button></div>
+  <div class="p-2" *ngIf='isLogged$ | async' routerLink="/animali">Animali</div>
+  <div class="p-2 reverse">
+    <button (click)="goToLogin()" *ngIf="!(isLogged$ | async); else loggedUserInfo"
+          id="btn-login">Login
+    </button>
+    <ng-template #loggedUserInfo>
+      <div id="user-info">
+        <div id="user-detail">Welcome, {{ authenticationService.MOCKED_USERNAME}}</div>
+      </div>
+      <button (click)="authenticationService.logout()">Logout</button>
+    </ng-template>
+  </div>
 </div>
 <router-outlet></router-outlet>
